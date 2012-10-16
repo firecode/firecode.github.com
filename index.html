@@ -15,7 +15,8 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $.getJSON( 'https://api.github.com/users/firecode/starred', function(data) {
-                alert(data);
+                
+                $('#starredrepotable').append('tr').append('td').html(data);
                 //some action here
             });
         });
