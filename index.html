@@ -14,11 +14,14 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $.getJSON( 'https://api.github.com/users/firecode/starred', function(data) {
+            $.getJSON('https://api.github.com/users/firecode/starred', function(data) {
                 
                 $('#starredrepotable').append('tr').append('td').html(data);
                 //some action here
-            });
+            })
+            .success(function() { alert("second success"); })
+            .error(function() { alert("error"); })
+            .complete(function() { alert("complete"); });;
         });
     </script>
   </head>
