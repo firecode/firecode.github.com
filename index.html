@@ -20,10 +20,9 @@
                 //some action here
             })
             .success(function() { alert("second success"); })
-            .error(function() { function(jqXHR, textStatus, errorThrown) {
+            .error(function(jqXHR, textStatus, errorThrown) {
                         alert("error " + textStatus);
                         alert("incoming Text " + jqXHR.responseText);
-                        }
                     });
         });
     </script>
